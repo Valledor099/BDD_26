@@ -49,8 +49,45 @@ select @cant;
 
 /*3*/
 delimiter //
-CREATE PROCEDURE borrarLinea()
+CREATE PROCEDURE borrarLinea(IN linea TEXT, out respuesta TEXT)
 BEGIN 
-
+	
+    IF EXISTS(SELECT productLine FROM products WHERE productLine = linea) THEN
+    SET respuesta = "La línea de productos no pudo borrarse porque contiene productos asociados.";
+	
+    ELSE 
+    DELETE FROM productlines
+    WHERE productiLine = linea;
+    SET respuesta = "La linea de productos fue borrada";
+    
+    END IF;
+    
 END//
 delimiter ;
+
+CALL borrarLinea("Classic Cars", @respuesta);
+SELECT @respuesta;
+
+/*8*/
+delimiter //
+CREATE PROCEDURE modificarComment(in orden int, in comm TEXT, out funciono int)
+BEGIN
+	IF EXISTS(SELECT orderNumber FROM orders WHERE orderNumber = orden)THEN
+    
+    UPDATE orders
+    SET comments = comm
+    WHERE orderNumber = orden;
+    
+    SET funciono = 1;
+    
+    ELSE
+    
+    SET funciono = 0;
+    
+    END IF;
+
+END //
+delimiter ;
+
+CALL modificarComment(312, "hola" , @funciono);
+SELECT @funciono;
