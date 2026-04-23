@@ -70,7 +70,7 @@ BEGIN
 			if hayFilas = 0 then
 				leave ordenLoop;
 			end if;
-            if completarCommentario = NULL then
+            if completarCommentario is NULL then
 				Update orders
 					SET comments = concat("El total de la orden es", totalOrden)
 					WHERE customerNumber = idCl;
@@ -81,8 +81,69 @@ end //
 delimiter ;
 
 drop procedure alterCommentOrder;
+call alterCommentOrder(101);
 
-call alterCommentOrder(121);
+delimiter //
+CREATE FUNCTION venta (idE int) returns float deterministic
+begin
+	declare totalVenta float default 0;
+    
+	SELECT sum(ordd.quantityOrdered * ordd.priceEach) into totalVenta from orderdetails ordd
+    JOIN orders ord ON ord.orderNumber = ordd.orderNumber
+    JOIN customers c ON c.customerNumber = ord.customerNumber
+    JOIN employees e ON e.employeeNumber = c.salesRepEmployeeNumber
+    Where e.employeeNumber = idE; 
+	
+    return totalVenta;
+end //
+delimiter ;
+drop function venta;
+
+alter table employees
+drop column comision;
+
+alter table employes
+add column comision int not null default 0;
+
+/*13*/
+delimiter //
+CREATE procedure actualizarComision()
+begin
+	declare hayFilas boolean;
+	declare totalVenta float;
+    declare agregarComision int default 0;
+    declare numeroEmpleado int;
+    declare employeeCursor cursor for select employeeNumber from employees;
+    declare continue handler for not found set hayFilas = 0;
+    
+    
+    open employeeCursor;
+    employeeLoop:loop
+		fetch employeeCursor into numeroEmpleado;
+			if hayFilas = 0 then
+				leave employeeLoop;
+			end if;
+            
+            if(venta(numeroEmpleado) > 100000) then
+            set agregarComision = venta(numeroEmpleado) * 0.05;
+            
+            else if (venta(numeroEmpleado) < 100000 and venta(numeroEmpleado) > 50000) then
+            set agregarComision = venta(numeroEmpleado) * 0.03;
+				end if;
+				end if;
+                
+			update employees
+			set comision = agregarComision
+			where employeeNumber = numeroEmpleado;
+            
+            end loop employeeLoop;
+            close employeeCursor;
+end //
+delimiter ;
+drop procedure actualizarComision;
+call actualizarComision();
+            
+
 
     
         
