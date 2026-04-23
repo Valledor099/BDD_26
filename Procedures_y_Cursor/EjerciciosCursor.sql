@@ -82,7 +82,9 @@ delimiter ;
 
 drop procedure alterCommentOrder;
 call alterCommentOrder(101);
-
+ 
+ /*13*/
+ 
 delimiter //
 CREATE FUNCTION venta (idE int) returns float deterministic
 begin
@@ -99,13 +101,10 @@ end //
 delimiter ;
 drop function venta;
 
-alter table employees
-drop column comision;
-
 alter table employes
 add column comision int not null default 0;
 
-/*13*/
+
 delimiter //
 CREATE procedure actualizarComision()
 begin
@@ -142,7 +141,65 @@ end //
 delimiter ;
 drop procedure actualizarComision;
 call actualizarComision();
-            
+
+/*Ej agregado*/
+
+Create table if not exists reporte_ventas 
+(
+	numeroOrden int,
+    nombreCliente varchar(45),
+    pais varchar(45),
+    totalGastado float,
+    cantItems int,
+    estado varchar(45),
+    diasParaEntrega int
+);
+
+
+delimiter //
+CREATE procedure insertReporteVentas()
+begin 
+	declare hayFilas boolean;
+	declare totalVenta float;
+    declare numOrden int;
+    declare nomCliente varchar(45);
+    declare paises varchar(45);
+    declare totalGast float;
+    declare cantidadItems int;
+    declare est varchar(45);
+    declare diasEntrega int;
+    declare employeeCursor cursor for select * from orders;
+    declare continue handler for not found set hayFilas = 0;
+    open employeeCursor;
+    employeeLoop:Loop
+    fetch employeeCursor into numOrden, nomCliente, paises, totalGast, cantidadItems, est, diasEntrega;
+    if hayFilas = 0 then
+				leave employeeLoop;
+			end if;
+	insert into reporte_ventas(NumeroOrden, nombreCliente, pais, totalGastado, cantItems, estado, diasParaEntrega)
+    SELECT 
+    n,
+    CONCAT('Cliente_', n),
+    ELT((n % 5)+1, 'Argentina','Brasil','Chile','Uruguay','Peru'),
+    n * 1000,
+    (n % 10) + 1,
+    ELT((n % 3)+1, 'Pendiente','Enviado','Entregado'),
+    (n % 20) + 1
+FROM (
+    SELECT @row := @row + 1 AS n
+    FROM information_schema.tables, (SELECT @row := 0) r
+    LIMIT 10000
+) t;
+end loop employeeLoop;
+close employeeCursor;
+end//
+delimiter ;
+
+call insertReporteVentas();
+
+
+
+
 
 
     
