@@ -13,7 +13,7 @@ Last_date_modified datetime,
 delimiter// 
 create trigger insert_customers_audit after insert on customers for each row
 begin
-	insert into customers_audit values("insert", new.customerNumber, new.now(), new.customerName
+	insert into customers_audit values("insert", new.customerNumber, new.now(), new.customerName)
 end//
 delimiter ;
 

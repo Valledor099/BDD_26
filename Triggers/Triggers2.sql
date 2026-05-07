@@ -47,3 +47,44 @@ delimiter ;
 
 
 /*5*/
+/*Solucion con trigger*/
+DELIMITER //
+ 
+CREATE TRIGGER tr_before_delete_pedido BEFORE DELETE ON pedido FOR EACH ROW
+BEGIN
+    DECLARE v_count_productos INT;
+    
+    SELECT COUNT(*) INTO v_count_productos 
+    FROM pedido_producto 
+    WHERE Pedido_idPedido = OLD.idPedido;
+    
+    
+    DELETE FROM pedido_producto 
+    WHERE Pedido_idPedido = OLD.idPedido;
+    
+    
+END //
+ 
+DELIMITER ;
+ 
+
+
+DELETE FROM pedido WHERE idPedido = 5;
+SELECT * FROM auditoria_pedidos WHERE idPedido = 5;
+
+/*Solucion con cambiar foregin key a delete cascade*/
+
+
+ALTER TABLE pedido_producto
+DROP FOREIGN KEY fk_Pedido_Producto_Pedido1;
+ 
+ALTER TABLE pedido_producto
+ADD CONSTRAINT fk_Pedido_Producto_Pedido1 
+FOREIGN KEY (pedido_idPedido)
+REFERENCES pedido(idPedido) 
+ON DELETE CASCADE;
+ 
+
+DELETE FROM pedido WHERE idPedido = 5;
+
+
