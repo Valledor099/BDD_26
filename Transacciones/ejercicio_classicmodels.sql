@@ -19,10 +19,6 @@ drop procedure compra;
 
 CALL compra (12,'S10_1678', 10000,date(now()))
 
--- 3 --
-delimiter //
-create procedure cambiaEstado (in numeroPedido int)
-begin
-
+-- 3 -- 
 
 
