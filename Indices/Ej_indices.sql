@@ -123,5 +123,12 @@ explain analyze SELECT * FROM orders where orderDate = '2021-06-06';
 
 -- con index compuesto
 create index indiceCE on orders(customerNumber, status);
-explain analyze SELECT * FROM orders where customerNumber =6722 and status = 'Shipped'
+explain analyze SELECT * FROM orders where customerNumber =6722 and status = 'Shipped';
 -- '-> Index lookup on orders using indiceCE (customerNumber=6722, status=\'Shipped\')  (cost=1.4 rows=4) (actual time=0.0151..0.0252 rows=4 loops=1)\n'
+
+explain analyze SELECT * FROM orders where customerNumber =6722;
+-- '-> Index lookup on orders using customerNumber (customerNumber=6722)  (cost=2.1 rows=6) (actual time=0.0134..0.0257 rows=6 loops=1)\n'
+
+
+explain analyze SELECT * FROM orders where status = 'Shipped';
+-- '-> Filter: (orders.`status` = \'Shipped\')  (cost=6869 rows=6797) (actual time=0.0176..40.8 rows=20877 loops=1)\n    -> Table scan on orders  (cost=6869 rows=67965) (actual time=0.0165..36.5 rows=70324 loops=1)\n'
