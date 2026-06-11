@@ -8,17 +8,18 @@ create user 'user_reportes'@'localhost' IDENTIFIED BY 'DRag0n_208';
 create user 'desarrollo'@'localhost' IDENTIFIED BY 'DR4g0N_12';
 create user 'admin_bdd'@'localhost' IDENTIFIED BY 'dr4Gon_92';
 
+
 SELECT * FROM mysql.user;
 
 
  use stock;
 /*2*/
 -- ROL STOCK
-CREATE ROLE 'rol_stock';	
-grant SELECT ON stock.* to 'rol_stock';
-GRANT EXECUTE ON PROCEDURE stock.actualizarStock TO 'rol_stock';
-GRANT EXECUTE ON PROCEDURE stock.reducirPrecio TO 'rol_stock';
-GRANT EXECUTE ON PROCEDURE stock.actualizarPrecioPorProveedor TO 'rol_stock';
+CREATE ROLE 'rol_stock'@'%';
+grant SELECT ON stock.* to 'rol_stock'@'%';
+GRANT EXECUTE ON PROCEDURE stock.actualizarStock TO 'rol_stock'@'%';
+GRANT EXECUTE ON PROCEDURE stock.reducirPrecio TO 'rol_stock'@'%';
+GRANT EXECUTE ON PROCEDURE stock.actualizarPrecioPorProveedor TO 'rol_stock'@'%';
 
 
 delimiter //
@@ -81,11 +82,20 @@ create role 'administrador';
 GRANT ALL privileges ON classicmodels.* TO 'administrador';
 GRANT ALL privileges ON stock.* TO 'administrador';
 
-show grants for 'desarrollo';
+show grants for 'rol_stock';
 
 /*3*/
 GRANT 'rol_stock' TO 'analista_stock'@'localhost';
+DROP user 'analista_stock'@'localhost';
+DROP ROLE 'rol_stock';
+
 GRANT 'gestion_ordenes' TO 'gestor_productos'@'localhost';
 GRANT 'reportes' TO 'user_reportes'@'localhost';
 GRANT 'desarrollo' TO 'desarrollo'@'localhost';
 GRANT 'administrador' TO 'admin_bdd'@'localhost';
+
+use stock;
+select * from categoria;
+
+
+SET GLOBAL activate_all_roles_on_login = ON;
