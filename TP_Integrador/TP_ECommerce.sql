@@ -90,6 +90,14 @@ CREATE TABLE MedioDePago(
 	id_medioPago INT AUTO_INCREMENT PRIMARY KEY,
 	nombre VARCHAR(25)
 );
+
+CREATE TABLE Publicacion_MedioPago (
+    id_publicacion INT NOT NULL,
+    id_medio_pago INT NOT NULL,
+    PRIMARY KEY (id_publicacion, id_medio_pago),
+    FOREIGN KEY (id_publicacion) REFERENCES Publicacion(id_publicacion),
+    FOREIGN KEY (id_medio_pago) REFERENCES MedioDePago(id_medioPago)
+);
  
 CREATE TABLE MedioDeEnvio(
 	id_medioEnvio INT AUTO_INCREMENT PRIMARY KEY,
@@ -134,6 +142,27 @@ CREATE TABLE IF NOT EXISTS Calificacion (
     FOREIGN KEY (id_venta) REFERENCES Venta(id_venta),
     FOREIGN KEY (id_usuario_evaluado) REFERENCES Usuarios(id_usuario),
     FOREIGN KEY (id_calificador) REFERENCES Usuarios(id_usuario)
+);
+
+CREATE TABLE Notificacion (
+    id_notificacion INT AUTO_INCREMENT PRIMARY KEY,
+    id_usuario INT NOT NULL,
+    mensaje VARCHAR(255) NOT NULL,
+    fecha DATETIME NOT NULL,
+    leida BOOLEAN DEFAULT FALSE,
+
+    FOREIGN KEY (id_usuario)
+        REFERENCES Usuarios(id_usuario)
+);
+
+CREATE TABLE Estadistica_Diaria (
+    id_estadistica INT AUTO_INCREMENT PRIMARY KEY,
+    fecha DATE NOT NULL,
+    cantidad_vendedores INT NOT NULL,
+    cantidad_compradores INT NOT NULL,
+    cantidad_productos INT NOT NULL,
+    cantidad_ventas INT NOT NULL,
+    facturacion_total FLOAT NOT NULL
 );
 
 
@@ -312,7 +341,9 @@ INSERT INTO NivelExposicion (nombre) VALUES
 
 INSERT INTO Estado (nombre) VALUES
 ('Activa'),
-('Finalizada');
+('Finalizada'),
+('Pausada'),
+('Observada');
 
 
 -- =========================================================
@@ -518,6 +549,20 @@ INSERT INTO MedioDePago (nombre) VALUES
 ('Pago Facil'),
 ('Rapipago');
 
+-- =========================================================
+-- Publicacion_Medio_de_pago
+-- =========================================================
+INSERT INTO Publicacion_MedioPago
+(id_publicacion, id_medio_pago)
+VALUES
+(1, 1),
+(1, 2),
+(2, 1),
+(3, 1),
+(3, 2),
+(6, 3),
+(8, 4),
+(10, 2);
 
 -- =========================================================
 -- 11. MEDIOS DE ENVIO
