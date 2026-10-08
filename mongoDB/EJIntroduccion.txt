@@ -1,0 +1,52 @@
+1//
+
+db.usuarios.insertOne({_id: 5, nombre: "Agustin", apellido: "Valledor", edad: 18, mail: "alumno27.valledor.agustin@ipm.edu.ar", compras: [{id_compra: 9, monto: 250.50, productos:["celular", "papas fritas", "protectorSolar"]}]})
+
+db.usuarios.insertOne({_id: 6, nombre: "Thiago", apellido: "Andreoli", edad: 18, mail: "alumno27.andreoli.castro.thiago", compras: [{id_compra: 10, monto: 450.50, productos:["celular", "juegoDeMesa", "teclado mecanico"]}]})
+
+
+db.usuarios.find({nombre: "Agustin"})
+
+2//
+
+db.usuarios.find({edad:{$gt: 25}}, {nombre: 1, apellido: 1})
+
+3//
+
+db.usuarios.find({compras:{$size: 2}}, {_id: 1, mail: 1})
+
+4//
+
+db.usuarios.find({}, {"compras.monto": 1})
+
+5//
+
+db.usuarios.find({"compras.productos.5": {$exists: true}}, {"compras.id_compra": 1})
+
+6//
+
+db.usuarios.find({"compras.id_compra": {$eq: 1}}, {"compras.productos": 1})
+
+7//
+
+db.usuarios.updateOne({_id: 2}, {$push: {compras: [{id_compra: 12, monto: 33.40, productos:["banana"]}]}})
+
+8//
+
+db.usuarios.updateOne({nombre: "Felipe", apellido: "Gonzales"}, {$set: {mail: "feli.gonz@gmail.com"}})
+
+9//
+
+db.usuarios.find({}, {"compra.id_compra": 1, "compras.monto": 1}).sort({"compras.monto": -1}).limit(3)
+
+10//
+
+db.usuarios.find({"compras.productos": {$ne: "televisor"}}, {nombre: 1, mail: 1}).sort({edad: -1})
+
+11//
+
+db.usuarios.find({"compras.productos": "laptop"}, {nombre: 1})
+
+12//
+
+db.usuarios.find({"compras.productos": "televisor", "compras.monto": {$gt: 250}}, {nombre: 1})
