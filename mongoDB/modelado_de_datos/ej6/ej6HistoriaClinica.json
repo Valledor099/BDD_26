@@ -1,0 +1,65 @@
+[{
+  "_id": 1,
+  "numero_historia": "HC001",
+  "fecha_inicio": "2025-01-15",
+  "observaciones_generales": "Paciente con antecedentes de hipertensión.",
+  "paciente": {
+    "dni": "35123456",
+    "nombre": "Juan",
+    "apellido": "Perez",
+    "fecha_nacimiento": "1990-05-12",
+    "telefono": "1123456789"
+  }
+},
+{
+  "_id": 2,
+  "numero_historia": "HC002",
+  "fecha_inicio": "2025-02-10",
+  "observaciones_generales": "Paciente sin antecedentes médicos relevantes.",
+  "paciente": {
+    "dni": "32876543",
+    "nombre": "Maria",
+    "apellido": "Gonzalez",
+    "fecha_nacimiento": "1988-09-23",
+    "telefono": "1134567890"
+  }
+},
+{
+  "_id": 3,
+  "numero_historia": "HC003",
+  "fecha_inicio": "2025-03-05",
+  "observaciones_generales": "Paciente con antecedentes de alergia al polen.",
+  "paciente": {
+    "dni": "40987654",
+    "nombre": "Lucas",
+    "apellido": "Fernandez",
+    "fecha_nacimiento": "2000-11-08",
+    "telefono": "1145678901"
+  }
+},
+{
+  "_id": 4,
+  "numero_historia": "HC004",
+  "fecha_inicio": "2025-04-20",
+  "observaciones_generales": "Paciente con antecedentes de asma.",
+  "paciente": {
+    "dni": "29765432",
+    "nombre": "Sofia",
+    "apellido": "Martinez",
+    "fecha_nacimiento": "1985-07-16",
+    "telefono": "1156789012"
+  }
+},
+{
+  "_id": 5,
+  "numero_historia": "HC005",
+  "fecha_inicio": "2025-05-12",
+  "observaciones_generales": "Paciente sin antecedentes médicos relevantes.",
+  "paciente": {
+    "dni": "38456789",
+    "nombre": "Mateo",
+    "apellido": "Lopez",
+    "fecha_nacimiento": "1995-02-28",
+    "telefono": "1167890123"
+  }
+}]

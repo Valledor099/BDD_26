@@ -1,0 +1,105 @@
+[{
+  "_id": 1,
+  "nombre": "Juan",
+  "apellido": "Perez",
+  "email": "juan.perez@gmail.com",
+  "clave": "juan123",
+  "direcciones": [
+    {
+      "calle": "Av. Corrientes 1234",
+      "ciudad": "Buenos Aires",
+      "codigo_postal": "1043",
+      "provincia": "Buenos Aires"
+    },
+    {
+      "calle": "San Martin 567",
+      "ciudad": "La Plata",
+      "codigo_postal": "1900",
+      "provincia": "Buenos Aires"
+    }
+  ]
+},
+{
+  "_id": 2,
+  "nombre": "Maria",
+  "apellido": "Gonzalez",
+  "email": "maria.gonzalez@gmail.com",
+  "clave": "maria456",
+  "direcciones": [
+    {
+      "calle": "Av. Pellegrini 890",
+      "ciudad": "Rosario",
+      "codigo_postal": "2000",
+      "provincia": "Santa Fe"
+    },
+    {
+      "calle": "Belgrano 456",
+      "ciudad": "Santa Fe",
+      "codigo_postal": "3000",
+      "provincia": "Santa Fe"
+    }
+  ]
+},
+{
+  "_id": 3,
+  "nombre": "Lucas",
+  "apellido": "Fernandez",
+  "email": "lucas.fernandez@gmail.com",
+  "clave": "lucas789",
+  "direcciones": [
+    {
+      "calle": "Av. Colon 234",
+      "ciudad": "Cordoba",
+      "codigo_postal": "5000",
+      "provincia": "Cordoba"
+    },
+    {
+      "calle": "San Juan 789",
+      "ciudad": "Villa Carlos Paz",
+      "codigo_postal": "5152",
+      "provincia": "Cordoba"
+    }
+  ]
+},
+{
+  "_id": 4,
+  "nombre": "Sofia",
+  "apellido": "Martinez",
+  "email": "sofia.martinez@gmail.com",
+  "clave": "sofia321",
+  "direcciones": [
+    {
+      "calle": "Av. Rivadavia 1500",
+      "ciudad": "Buenos Aires",
+      "codigo_postal": "1033",
+      "provincia": "Buenos Aires"
+    },
+    {
+      "calle": "Mitre 321",
+      "ciudad": "Mar del Plata",
+      "codigo_postal": "7600",
+      "provincia": "Buenos Aires"
+    }
+  ]
+},
+{
+  "_id": 5,
+  "nombre": "Mateo",
+  "apellido": "Lopez",
+  "email": "mateo.lopez@gmail.com",
+  "clave": "mateo654",
+  "direcciones": [
+    {
+      "calle": "San Martin 654",
+      "ciudad": "Mendoza",
+      "codigo_postal": "5500",
+      "provincia": "Mendoza"
+    },
+    {
+      "calle": "Las Heras 987",
+      "ciudad": "San Rafael",
+      "codigo_postal": "5600",
+      "provincia": "Mendoza"
+    }
+  ]
+}]

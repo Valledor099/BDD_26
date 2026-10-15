@@ -1,0 +1,88 @@
+[{
+  "_id": 1,
+  "nombre": "Base de Datos",
+  "codigo": "BD101",
+  "horas_semanales": 4,
+  "profesores": [
+    {
+      "id": 1,
+      "nombre": "Carlos",
+      "apellido": "Gomez",
+      "email": "carlos.gomez@instituto.com",
+      "titulo": "Licenciado en Sistemas"
+    },
+    {
+      "id": 2,
+      "nombre": "Laura",
+      "apellido": "Martinez",
+      "email": "laura.martinez@instituto.com",
+      "titulo": "Ingeniera en Informática"
+    }
+  ]
+},
+{
+  "_id": 2,
+  "nombre": "Programación",
+  "codigo": "PR201",
+  "horas_semanales": 6,
+  "profesores": [
+    {
+      "id": 1,
+      "nombre": "Carlos",
+      "apellido": "Gomez",
+      "email": "carlos.gomez@instituto.com",
+      "titulo": "Licenciado en Sistemas"
+    },
+    {
+      "id": 3,
+      "nombre": "Sofia",
+      "apellido": "Fernandez",
+      "email": "sofia.fernandez@instituto.com",
+      "titulo": "Analista de Sistemas"
+    }
+  ]
+},
+{
+  "_id": 3,
+  "nombre": "Matemática",
+  "codigo": "MA301",
+  "horas_semanales": 5,
+  "profesores": [
+    {
+      "id": 2,
+      "nombre": "Laura",
+      "apellido": "Martinez",
+      "email": "laura.martinez@instituto.com",
+      "titulo": "Ingeniera en Informática"
+    },
+    {
+      "id": 4,
+      "nombre": "Roberto",
+      "apellido": "Lopez",
+      "email": "roberto.lopez@instituto.com",
+      "titulo": "Profesor de Matemática"
+    }
+  ]
+},
+{
+  "_id": 4,
+  "nombre": "Sistemas Operativos",
+  "codigo": "SO401",
+  "horas_semanales": 4,
+  "profesores": [
+    {
+      "id": 1,
+      "nombre": "Carlos",
+      "apellido": "Gomez",
+      "email": "carlos.gomez@instituto.com",
+      "titulo": "Licenciado en Sistemas"
+    },
+    {
+      "id": 4,
+      "nombre": "Roberto",
+      "apellido": "Lopez",
+      "email": "roberto.lopez@instituto.com",
+      "titulo": "Profesor de Matemática"
+    }
+  ]
+}]

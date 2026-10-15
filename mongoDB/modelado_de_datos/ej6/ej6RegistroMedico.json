@@ -1,0 +1,80 @@
+[{
+  "_id": 1,
+  "id_historia_clinica": 1,
+  "fecha_consulta": "2025-01-20",
+  "diagnostico": "Hipertension arterial",
+  "tratamiento": "Control periódico de la presión arterial y seguimiento médico.",
+  "medico": "Dr. Roberto Sanchez"
+},
+{
+  "_id": 2,
+  "id_historia_clinica": 1,
+  "fecha_consulta": "2025-03-15",
+  "diagnostico": "Hipertension arterial controlada",
+  "tratamiento": "Continuar con los controles y el tratamiento indicado.",
+  "medico": "Dra. Laura Ramirez"
+},
+{
+  "_id": 3,
+  "id_historia_clinica": 2,
+  "fecha_consulta": "2025-02-15",
+  "diagnostico": "Gripe estacional",
+  "tratamiento": "Reposo, hidratacion y seguimiento de los sintomas.",
+  "medico": "Dr. Carlos Fernandez"
+},
+{
+  "_id": 4,
+  "id_historia_clinica": 2,
+  "fecha_consulta": "2025-02-22",
+  "diagnostico": "Recuperacion de gripe estacional",
+  "tratamiento": "Control clinico y alta medica.",
+  "medico": "Dr. Carlos Fernandez"
+},
+{
+  "_id": 5,
+  "id_historia_clinica": 3,
+  "fecha_consulta": "2025-03-10",
+  "diagnostico": "Rinitis alergica",
+  "tratamiento": "Evitar los alergenos identificados y realizar seguimiento médico.",
+  "medico": "Dra. Ana Torres"
+},
+{
+  "_id": 6,
+  "id_historia_clinica": 3,
+  "fecha_consulta": "2025-04-05",
+  "diagnostico": "Rinitis alergica en mejoria",
+  "tratamiento": "Continuar con las medidas de prevención de alergias.",
+  "medico": "Dra. Ana Torres"
+},
+{
+  "_id": 7,
+  "id_historia_clinica": 4,
+  "fecha_consulta": "2025-04-25",
+  "diagnostico": "Crisis asmatica leve",
+  "tratamiento": "Evaluación médica y seguimiento del control del asma.",
+  "medico": "Dr. Miguel Castro"
+},
+{
+  "_id": 8,
+  "id_historia_clinica": 4,
+  "fecha_consulta": "2025-06-10",
+  "diagnostico": "Asma controlada",
+  "tratamiento": "Continuar con los controles médicos periódicos.",
+  "medico": "Dr. Miguel Castro"
+},
+{
+  "_id": 9,
+  "id_historia_clinica": 5,
+  "fecha_consulta": "2025-05-20",
+  "diagnostico": "Gastroenteritis aguda",
+  "tratamiento": "Hidratación, reposo y seguimiento de los síntomas.",
+  "medico": "Dra. Paula Morales"
+},
+{
+  "_id": 10,
+  "id_historia_clinica": 5,
+  "fecha_consulta": "2025-05-25",
+  "diagnostico": "Recuperación de gastroenteritis",
+  "tratamiento": "Control clínico y seguimiento de la recuperación.",
+  "medico": "Dra. Paula Morales"
+}]

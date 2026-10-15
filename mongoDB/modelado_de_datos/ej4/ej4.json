@@ -1,0 +1,150 @@
+[{
+  "_id": 1,
+  "titulo": "Titanic",
+  "anio": 1997,
+  "genero": "Drama",
+  "duracion": 195,
+  "actores": [
+    {
+      "id": 1,
+      "nombre": "Leonardo",
+      "apellido": "DiCaprio",
+      "fecha_nacimiento": "1974-11-11",
+      "nacionalidad": "Estadounidense"
+    },
+    {
+      "id": 2,
+      "nombre": "Kate",
+      "apellido": "Winslet",
+      "fecha_nacimiento": "1975-10-05",
+      "nacionalidad": "Británica"
+    },
+    {
+      "id": 3,
+      "nombre": "Billy",
+      "apellido": "Zane",
+      "fecha_nacimiento": "1966-02-24",
+      "nacionalidad": "Estadounidense"
+    }
+  ]
+},
+{
+  "_id": 2,
+  "titulo": "El origen",
+  "anio": 2010,
+  "genero": "Ciencia ficción",
+  "duracion": 148,
+  "actores": [
+    {
+      "id": 1,
+      "nombre": "Leonardo",
+      "apellido": "DiCaprio",
+      "fecha_nacimiento": "1974-11-11",
+      "nacionalidad": "Estadounidense"
+    },
+    {
+      "id": 4,
+      "nombre": "Joseph",
+      "apellido": "Gordon-Levitt",
+      "fecha_nacimiento": "1981-02-17",
+      "nacionalidad": "Estadounidense"
+    },
+    {
+      "id": 5,
+      "nombre": "Elliot",
+      "apellido": "Page",
+      "fecha_nacimiento": "1987-02-21",
+      "nacionalidad": "Canadiense"
+    }
+  ]
+},
+{
+  "_id": 3,
+  "titulo": "Piratas del Caribe: La maldición del Perla Negra",
+  "anio": 2003,
+  "genero": "Aventura",
+  "duracion": 143,
+  "actores": [
+    {
+      "id": 6,
+      "nombre": "Johnny",
+      "apellido": "Depp",
+      "fecha_nacimiento": "1963-06-09",
+      "nacionalidad": "Estadounidense"
+    },
+    {
+      "id": 7,
+      "nombre": "Orlando",
+      "apellido": "Bloom",
+      "fecha_nacimiento": "1977-01-13",
+      "nacionalidad": "Británica"
+    },
+    {
+      "id": 8,
+      "nombre": "Keira",
+      "apellido": "Knightley",
+      "fecha_nacimiento": "1985-03-26",
+      "nacionalidad": "Británica"
+    }
+  ]
+},
+{
+  "_id": 4,
+  "titulo": "El lobo de Wall Street",
+  "anio": 2013,
+  "genero": "Comedia dramática",
+  "duracion": 180,
+  "actores": [
+    {
+      "id": 1,
+      "nombre": "Leonardo",
+      "apellido": "DiCaprio",
+      "fecha_nacimiento": "1974-11-11",
+      "nacionalidad": "Estadounidense"
+    },
+    {
+      "id": 9,
+      "nombre": "Jonah",
+      "apellido": "Hill",
+      "fecha_nacimiento": "1983-12-20",
+      "nacionalidad": "Estadounidense"
+    },
+    {
+      "id": 10,
+      "nombre": "Margot",
+      "apellido": "Robbie",
+      "fecha_nacimiento": "1990-07-02",
+      "nacionalidad": "Australiana"
+    }
+  ]
+},
+{
+  "_id": 5,
+  "titulo": "Gladiador",
+  "anio": 2000,
+  "genero": "Acción",
+  "duracion": 155,
+  "actores": [
+    {
+      "id": 11,
+      "nombre": "Russell",
+      "apellido": "Crowe",
+      "fecha_nacimiento": "1964-04-07",
+      "nacionalidad": "Neozelandesa"
+    },
+    {
+      "id": 12,
+      "nombre": "Joaquin",
+      "apellido": "Phoenix",
+      "fecha_nacimiento": "1974-10-28",
+      "nacionalidad": "Estadounidense"
+    },
+    {
+      "id": 13,
+      "nombre": "Connie",
+      "apellido": "Nielsen",
+      "fecha_nacimiento": "1965-07-03",
+      "nacionalidad": "Danesa"
+    }
+  ]
+}]

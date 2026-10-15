@@ -1,0 +1,144 @@
+[{
+  "_id": 1,
+  "id_usuario": 1,
+  "fecha": "2026-10-01",
+  "productos": [
+    {
+      "id": 101,
+      "cantidad": 2,
+      "precio_unitario": 15000
+    },
+    {
+      "id": 102,
+      "cantidad": 1,
+      "precio_unitario": 25000
+    }
+  ],
+  "monto_total": 55000
+},
+{
+  "_id": 2,
+  "id_usuario": 1,
+  "fecha": "2026-10-05",
+  "productos": [
+    {
+      "id": 103,
+      "cantidad": 3,
+      "precio_unitario": 8000
+    },
+    {
+      "id": 104,
+      "cantidad": 1,
+      "precio_unitario": 12000
+    }
+  ],
+  "monto_total": 36000
+},
+{
+  "_id": 3,
+  "id_usuario": 2,
+  "fecha": "2026-10-02",
+  "productos": [
+    {
+      "id": 105,
+      "cantidad": 1,
+      "precio_unitario": 45000
+    },
+    {
+      "id": 106,
+      "cantidad": 2,
+      "precio_unitario": 10000
+    }
+  ],
+  "monto_total": 65000
+},
+{
+  "_id": 4,
+  "id_usuario": 2,
+  "fecha": "2026-10-07",
+  "productos": [
+    {
+      "id": 107,
+      "cantidad": 2,
+      "precio_unitario": 18000
+    },
+    {
+      "id": 108,
+      "cantidad": 1,
+      "precio_unitario": 22000
+    }
+  ],
+  "monto_total": 58000
+},
+{
+  "_id": 5,
+  "id_usuario": 3,
+  "fecha": "2026-10-03",
+  "productos": [
+    {
+      "id": 109,
+      "cantidad": 1,
+      "precio_unitario": 30000
+    },
+    {
+      "id": 110,
+      "cantidad": 2,
+      "precio_unitario": 7500
+    }
+  ],
+  "monto_total": 45000
+},
+{
+  "_id": 6,
+  "id_usuario": 3,
+  "fecha": "2026-10-09",
+  "productos": [
+    {
+      "id": 111,
+      "cantidad": 2,
+      "precio_unitario": 12000
+    },
+    {
+      "id": 112,
+      "cantidad": 1,
+      "precio_unitario": 16000
+    }
+  ],
+  "monto_total": 40000
+},
+{
+  "_id": 7,
+  "id_usuario": 4,
+  "fecha": "2026-10-04",
+  "productos": [
+    {
+      "id": 113,
+      "cantidad": 1,
+      "precio_unitario": 50000
+    },
+    {
+      "id": 114,
+      "cantidad": 2,
+      "precio_unitario": 5000
+    }
+  ],
+  "monto_total": 60000
+},
+{
+  "_id": 8,
+  "id_usuario": 4,
+  "fecha": "2026-10-10",
+  "productos": [
+    {
+      "id": 115,
+      "cantidad": 3,
+      "precio_unitario": 9000
+    },
+    {
+      "id": 116,
+      "cantidad": 1,
+      "precio_unitario": 14000
+    }
+  ],
+  "monto_total": 41000
+}]
