@@ -1,0 +1,18 @@
+
+1) db.Tienda.aggregate([{$group:{"_id":null,"promedio":{$avg:"$edad"}}}])
+
+2) db.Tienda.aggregate([{$unwind:'$compras'},{$unwind:'$compras.productos'},{$group:{_id: '$compras.productos.id', totalCompradas:{$sum: '$compras.productos.cantidadComprada'} } }])
+
+3) db.Tienda.aggregate([{ $unwind: "$compras" },{$unwind: "$compras.productos" },{$group: {_id: {dni: "$dni",nombre:"$nombre",apellido: "$apellido"},totalGastado: {$sum: {$multiply: ["$compras.productos.precio","$compras.productos.cantidadComprada"]}}}}])
+
+4) db.Tienda.aggregate([{$project:{nombre:'$nombre',apellido:'$apellido', cant_compras:{$size: '$compras'}}},{$match:{cant_compras:{$gt:2}}}])
+
+5)db.Tienda.aggregate([{$project:{_id:0,dni:1,nombre:1,apellido:1,cantidadCompras:{$size:"$compras"}}},{$sort:{cantidadCompras:-1}},{$limit:1}])
+
+6)db.Tienda.aggregate([{ $unwind: "$compras" },{ $unwind: "$compras.productos" },{$group: {_id: "$compras.id",unidadesPorCompra: {$sum: "$compras.productos.cantidadComprada"}}},{$group: {_id: null,promedioUnidadesPorCompra: {$avg: "$unidadesPorCompra"}}},{$project: {_id: 0,promedioUnidadesPorCompra: 1}}])
+
+7)db.Tienda.aggregate([{ $unwind: "$compras" },{ $unwind: "$compras.productos" },{$group: {_id: {idProducto: "$compras.productos.id",descripcion: "$compras.productos.descripcion",idCompra: "$compras.id"}}},{$group: {_id: {idProducto: "$_id.idProducto",descripcion: "$_id.descripcion"},cantidadDeCompras: { $sum: 1 }}},{$project: {_id: 0,idProducto: "$_id.idProducto",descripcion: "$_id.descripcion",cantidadDeCompras: 1}}])
+
+8)db.Tienda.aggregate([{$unwind:"$compras"},{$match:{$expr:{$eq:["$compras.fecha",{$dateToString:{format:"%Y-%m-%d",date:"$$NOW",timezone:"America/Argentina/Buenos_Aires"}}]}}},{$unwind:"$compras.productos"},{$group:{_id:null,totalVendidoHoy:{$sum:{$multiply:["$compras.productos.precio","$compras.productos.cantidadComprada"]}}}},{$project:{_id:0,totalVendidoHoy:1}}])
+
+9)db.Tienda.aggregate([{$unwind:"$compras"},{$unwind:"$compras.productos"},{$group:{_id:"$compras.id",unidadesPorCompra:{$sum:"$compras.productos.cantidadComprada"}}},{$group:{_id:null,menorCantidadOrdenada:{$min:"$unidadesPorCompra"},mayorCantidadOrdenada:{$max:"$unidadesPorCompra"}}},{$project:{_id:0,menorCantidadOrdenada:1,mayorCantidadOrdenada:1}}])
