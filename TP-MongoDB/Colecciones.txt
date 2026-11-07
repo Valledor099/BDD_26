@@ -1,187 +1,610 @@
-## Restaurantes
-[
+
+db.restaurantes.insertOne({
+  "_id": ObjectId("6720a1b2c3d4e5f607182931"),
+  "nombre": "La Parrilla del Puerto",
+  "descripcion": "Parrilla tradicional argentina con vista al río.",
+  "caracteristicas": [
+    "parrilla",
+    "carnes",
+    "ambiente familiar",
+    "vista al río"
+  ],
+  "informacion": {
+    "direccion": {
+      "calle": "Av. Alicia Moreau de Justo",
+      "numero": "1200",
+      "ciudad": "Buenos Aires",
+      "provincia": "CABA"
+    },
+    "telefono": "+54 11 4555-1234",
+    "email": "contacto@parrilladelpuerto.com",
+    "horarios": [
+      {
+        "dia": "jueves",
+        "apertura": "12:00",
+        "cierre": "23:59"
+      },
+      {
+        "dia": "viernes",
+        "apertura": "12:00",
+        "cierre": "01:00"
+      },
+      {
+        "dia": "sabado",
+        "apertura": "12:00",
+        "cierre": "01:00"
+      },
+      {
+        "dia": "domingo",
+        "apertura": "12:00",
+        "cierre": "17:00"
+      }
+    ],
+    "metodos_pago": [
+      "efectivo",
+      "debito",
+      "credito",
+      "qr"
+    ]
+  },
+  "servicios_adicionales": [
+    {
+      "tipo": "estacionamiento",
+      "descripcion": "Playa propia con 30 lugares"
+    },
+    {
+      "tipo": "eventos_privados",
+      "descripcion": "Salón para hasta 60 personas"
+    },
+    {
+      "tipo": "opciones_sin_tacc"
+    },
+    {
+      "tipo": "pago_qr"
+    },
+    {
+      "tipo": "delivery"
+    },
+    {
+      "tipo": "reservas_online"
+    },
+    {
+      "tipo": "shows_en_vivo"
+    }
+  ],
+  "promociones": [
+    {
+      "nombre": "2x1 en bebidas",
+      "porcentaje_descuento": 50,
+      "publico": "general",
+      "fecha_inicio": ISODate("2026-11-01T00:00:00-03:00"),
+      "fecha_fin": ISODate("2026-11-30T00:00:00-03:00")
+    },
+    {
+      "nombre": "Descuento para jubilados",
+      "porcentaje_descuento": 10,
+      "publico": "jubilados",
+      "fecha_inicio": ISODate("2026-11-01T00:00:00-03:00"),
+      "fecha_fin": ISODate("2026-11-30T00:00:00-03:00")
+    }
+  ],
+  "eventos_especiales": [
+    {
+      "nombre": "Noche de tango",
+      "descripcion": "Cena show con orquesta en vivo",
+      "fecha": ISODate("2026-11-14T00:00:00-03:00"),
+      "horario": "21:00",
+      "requiere_reserva": true
+    },
+    {
+      "nombre": "Música en vivo",
+      "descripcion": "Jazz durante la cena",
+      "fecha": ISODate("2026-11-10T00:00:00-03:00"),
+      "horario": "21:00",
+      "requiere_reserva": true
+    }
+  ],
+  "menu": [
+    {
+      "nombre": "Bife de chorizo",
+      "precio": 18500,
+      "descripcion": "400 g a la parrilla con guarnición",
+      "categoria": "plato_principal",
+      "observacion": "Punto de cocción a elección",
+      "es_vegetariano": false,
+      "es_vegano": false,
+      "es_sin_tacc": true
+    },
+    {
+      "nombre": "Provoleta",
+      "precio": 7200,
+      "descripcion": "Provolone a la parrilla con orégano",
+      "categoria": "entrada",
+      "es_vegetariano": true,
+      "es_vegano": false,
+      "es_sin_tacc": true
+    },
+    {
+      "nombre": "Flan casero",
+      "precio": 5200,
+      "descripcion": "Con dulce de leche y crema",
+      "categoria": "postre",
+      "es_vegetariano": true,
+      "es_vegano": false,
+      "es_sin_tacc": false
+    },
+    {
+      "nombre": "Malbec copa",
+      "precio": 4800,
+      "descripcion": "Vino tinto de Mendoza",
+      "categoria": "bebida",
+      "es_vegetariano": true,
+      "es_vegano": true,
+      "es_sin_tacc": true
+    }
+  ]
+});
+
+db.restaurantes.insertMany([
   {
-    "_id": { "$oid": "6720a1b2c3d4e5f607182931" },
-    "nombre": "La Parrilla del Puerto",
-    "descripcion": "Parrilla tradicional argentina con vista al río.",
-    "caracteristicas": ["parrilla", "carnes", "ambiente familiar", "vista al río"],
+    "_id": ObjectId("6720a1b2c3d4e5f607182932"),
+    "nombre": "Verde Vivo",
+    "descripcion": "Cocina vegetariana y vegana de estación.",
+    "caracteristicas": [
+      "vegano",
+      "vegetariano",
+      "orgánico"
+    ],
     "informacion": {
-      "direccion": { "calle": "Av. Alicia Moreau de Justo", "numero": "1200", "ciudad": "Buenos Aires", "provincia": "CABA" },
-      "telefono": "+54 11 4555-1234",
-      "email": "contacto@parrilladelpuerto.com",
+      "direccion": {
+        "calle": "Thames",
+        "numero": "1850",
+        "ciudad": "Buenos Aires",
+        "provincia": "CABA"
+      },
+      "telefono": "+54 11 4777-9876",
       "horarios": [
-        { "dia": "jueves", "apertura": "12:00", "cierre": "23:59" },
-        { "dia": "viernes", "apertura": "12:00", "cierre": "01:00" },
-        { "dia": "sabado", "apertura": "12:00", "cierre": "01:00" },
-        { "dia": "domingo", "apertura": "12:00", "cierre": "17:00" }
+        {
+          "dia": "lunes",
+          "apertura": "09:00",
+          "cierre": "20:00"
+        },
+        {
+          "dia": "martes",
+          "apertura": "09:00",
+          "cierre": "20:00"
+        },
+        {
+          "dia": "miercoles",
+          "apertura": "09:00",
+          "cierre": "20:00"
+        }
       ],
-      "metodos_pago": ["efectivo", "debito", "credito", "qr"]
+      "metodos_pago": [
+        "efectivo",
+        "transferencia",
+        "qr"
+      ]
     },
     "servicios_adicionales": [
-      { "tipo": "estacionamiento", "descripcion": "Playa propia con 30 lugares" },
-      { "tipo": "eventos_privados", "descripcion": "Salón para hasta 60 personas" },
-      { "tipo": "opciones_sin_tacc" },
-      { "tipo": "pago_qr" }
+      {
+        "tipo": "opciones_veganas"
+      },
+      {
+        "tipo": "opciones_vegetarianas"
+      },
+      {
+        "tipo": "opciones_sin_tacc"
+      },
+      {
+        "tipo": "catering",
+        "descripcion": "Viandas para empresas"
+      },
+      {
+        "tipo": "delivery"
+      }
     ],
     "promociones": [
       {
-        "nombre": "2x1 en bebidas",
-        "porcentaje_descuento": 50,
-        "fecha_inicio": { "$date": "2026-11-01T00:00:00Z" },
-        "fecha_fin": { "$date": "2026-11-30T00:00:00Z" }
+        "nombre": "Descuento para estudiantes",
+        "porcentaje_descuento": 25,
+        "publico": "estudiantes",
+        "fecha_inicio": ISODate("2026-11-01T00:00:00-03:00"),
+        "fecha_fin": ISODate("2026-11-30T00:00:00-03:00")
       }
     ],
-    "eventos_especiales": [
-      {
-        "nombre": "Noche de tango",
-        "descripcion": "Cena show con orquesta en vivo",
-        "fecha": { "$date": "2026-11-14T00:00:00Z" },
-        "horario": "21:00",
-        "requiere_reserva": true
-      }
-    ],
-    "calificacion_promedio": 4.5,
-    "cantidad_resenias": 2
-  },
-  {
-    "_id": { "$oid": "6720a1b2c3d4e5f607182932" },
-    "nombre": "Verde Vivo",
-    "descripcion": "Cocina vegetariana y vegana de estación.",
-    "caracteristicas": ["vegano", "vegetariano", "orgánico"],
-    "informacion": {
-      "direccion": { "calle": "Thames", "numero": "1850", "ciudad": "Buenos Aires", "provincia": "CABA" },
-      "telefono": "+54 11 4777-9876",
-      "horarios": [
-        { "dia": "lunes", "apertura": "09:00", "cierre": "20:00" },
-        { "dia": "martes", "apertura": "09:00", "cierre": "20:00" },
-        { "dia": "miercoles", "apertura": "09:00", "cierre": "20:00" }
-      ],
-      "metodos_pago": ["efectivo", "transferencia", "qr"]
-    },
-    "servicios_adicionales": [
-      { "tipo": "opciones_veganas" },
-      { "tipo": "opciones_vegetarianas" },
-      { "tipo": "opciones_sin_tacc" },
-      { "tipo": "catering", "descripcion": "Viandas para empresas" }
-    ],
-    "promociones": [],
     "eventos_especiales": [
       {
         "nombre": "Clase de cocina vegana",
         "descripcion": "Taller práctico de 2 horas",
-        "fecha": { "$date": "2026-11-20T00:00:00Z" },
+        "fecha": ISODate("2026-11-20T00:00:00-03:00"),
         "horario": "18:00",
         "requiere_reserva": true
       }
     ],
-    "calificacion_promedio": 5,
-    "cantidad_resenias": 1
+    "menu": [
+      {
+        "nombre": "Hamburguesa de lentejas",
+        "precio": 9800,
+        "descripcion": "Con pan de masa madre y vegetales asados",
+        "categoria": "opcion_vegana",
+        "observacion": "Pan sin TACC bajo pedido",
+        "es_vegetariano": true,
+        "es_vegano": true,
+        "es_sin_tacc": false
+      },
+      {
+        "nombre": "Bowl de quinoa",
+        "precio": 8900,
+        "descripcion": "Quinoa, palta, garbanzos y tahini",
+        "categoria": "opcion_sin_tacc",
+        "es_vegetariano": true,
+        "es_vegano": true,
+        "es_sin_tacc": true
+      }
+    ]
+  },
+  {
+    "_id": ObjectId("6720a1b2c3d4e5f607182933"),
+    "nombre": "Sabores del Sur",
+    "descripcion": "Restaurante de cocina casera.",
+    "caracteristicas": [
+      "ambiente familiar"
+    ],
+    "informacion": {
+      "direccion": {
+        "calle": "Av. Santa Fe",
+        "numero": "2033",
+        "ciudad": "Buenos Aires",
+        "provincia": "CABA"
+      },
+      "telefono": "+54 11 4555-0033",
+      "horarios": [
+        {
+          "dia": "lunes",
+          "apertura": "12:00",
+          "cierre": "23:00"
+        },
+        {
+          "dia": "viernes",
+          "apertura": "12:00",
+          "cierre": "01:00"
+        }
+      ],
+      "metodos_pago": [
+        "efectivo",
+        "debito",
+        "qr"
+      ]
+    },
+    "servicios_adicionales": [
+      {
+        "tipo": "delivery"
+      },
+      {
+        "tipo": "reservas_online"
+      },
+      {
+        "tipo": "estacionamiento"
+      },
+      {
+        "tipo": "opciones_sin_tacc"
+      },
+      {
+        "tipo": "shows_en_vivo"
+      }
+    ],
+    "promociones": [
+      {
+        "nombre": "Descuento para estudiantes",
+        "porcentaje_descuento": 30,
+        "publico": "estudiantes",
+        "fecha_inicio": ISODate("2026-11-01T00:00:00-03:00"),
+        "fecha_fin": ISODate("2026-11-30T00:00:00-03:00")
+      },
+      {
+        "nombre": "Descuento para jubilados",
+        "porcentaje_descuento": 15,
+        "publico": "jubilados",
+        "fecha_inicio": ISODate("2026-11-01T00:00:00-03:00"),
+        "fecha_fin": ISODate("2026-11-30T00:00:00-03:00")
+      },
+      {
+        "nombre": "Bienvenida de primavera",
+        "porcentaje_descuento": 10,
+        "publico": "general",
+        "fecha_inicio": ISODate("2026-09-01T00:00:00-03:00"),
+        "fecha_fin": ISODate("2026-09-30T00:00:00-03:00")
+      }
+    ],
+    "eventos_especiales": [
+      {
+        "nombre": "Música en vivo",
+        "descripcion": "Folklore en vivo",
+        "fecha": ISODate("2026-11-12T00:00:00-03:00"),
+        "horario": "20:30",
+        "requiere_reserva": false
+      },
+      {
+        "nombre": "Degustación",
+        "descripcion": "Degustación de platos regionales",
+        "fecha": ISODate("2026-11-25T00:00:00-03:00"),
+        "horario": "19:00",
+        "requiere_reserva": true
+      }
+    ],
+    "menu": [
+      {
+        "nombre": "Risotto de hongos",
+        "precio": 12500,
+        "descripcion": "Arroz cremoso con hongos de estación",
+        "categoria": "plato_principal",
+        "observacion": "Consultar ingredientes al reservar",
+        "es_vegetariano": true,
+        "es_vegano": false,
+        "es_sin_tacc": true
+      },
+      {
+        "nombre": "Brownie",
+        "precio": 6000,
+        "descripcion": "Brownie de chocolate con helado",
+        "categoria": "postre",
+        "es_vegetariano": true,
+        "es_vegano": false,
+        "es_sin_tacc": false
+      },
+      {
+        "nombre": "Limonada",
+        "precio": 3500,
+        "descripcion": "Limonada fresca con menta",
+        "categoria": "bebida",
+        "es_vegetariano": true,
+        "es_vegano": true,
+        "es_sin_tacc": true
+      }
+    ]
+  },
+  {
+    "_id": ObjectId("6720a1b2c3d4e5f607182934"),
+    "nombre": "El Rincón Casero",
+    "descripcion": "Restaurante de cocina casera.",
+    "caracteristicas": [
+      "ambiente familiar"
+    ],
+    "informacion": {
+      "direccion": {
+        "calle": "Av. Santa Fe",
+        "numero": "2034",
+        "ciudad": "Buenos Aires",
+        "provincia": "CABA"
+      },
+      "telefono": "+54 11 4555-0034",
+      "horarios": [
+        {
+          "dia": "lunes",
+          "apertura": "12:00",
+          "cierre": "23:00"
+        },
+        {
+          "dia": "viernes",
+          "apertura": "12:00",
+          "cierre": "01:00"
+        }
+      ],
+      "metodos_pago": [
+        "efectivo",
+        "debito",
+        "qr"
+      ]
+    },
+    "servicios_adicionales": [
+      {
+        "tipo": "estacionamiento"
+      },
+      {
+        "tipo": "opciones_vegetarianas"
+      }
+    ],
+    "promociones": [],
+    "eventos_especiales": [],
+    "menu": [
+      {
+        "nombre": "Tarta de verduras",
+        "precio": 7500,
+        "descripcion": "Tarta de acelga y calabaza",
+        "categoria": "plato_principal",
+        "es_vegetariano": true,
+        "es_vegano": false,
+        "es_sin_tacc": false
+      },
+      {
+        "nombre": "Agua mineral",
+        "precio": 2000,
+        "descripcion": "Botella de 500 ml",
+        "categoria": "bebida",
+        "es_vegetariano": true,
+        "es_vegano": true,
+        "es_sin_tacc": true
+      }
+    ]
+  },
+  {
+    "_id": ObjectId("6720a1b2c3d4e5f607182935"),
+    "nombre": "Local con menú vacío",
+    "descripcion": "Restaurante de cocina casera.",
+    "caracteristicas": [
+      "ambiente familiar"
+    ],
+    "informacion": {
+      "direccion": {
+        "calle": "Av. Santa Fe",
+        "numero": "2035",
+        "ciudad": "Buenos Aires",
+        "provincia": "CABA"
+      },
+      "telefono": "+54 11 4555-0035",
+      "horarios": [
+        {
+          "dia": "lunes",
+          "apertura": "12:00",
+          "cierre": "23:00"
+        },
+        {
+          "dia": "viernes",
+          "apertura": "12:00",
+          "cierre": "01:00"
+        }
+      ],
+      "metodos_pago": [
+        "efectivo",
+        "debito",
+        "qr"
+      ]
+    },
+    "servicios_adicionales": [],
+    "promociones": [],
+    "eventos_especiales": [],
+    "menu": []
+  },
+  {
+    "_id": ObjectId("6720a1b2c3d4e5f607182936"),
+    "nombre": "Local sin campo menú",
+    "descripcion": "Restaurante de cocina casera.",
+    "caracteristicas": [
+      "ambiente familiar"
+    ],
+    "informacion": {
+      "direccion": {
+        "calle": "Av. Santa Fe",
+        "numero": "2036",
+        "ciudad": "Buenos Aires",
+        "provincia": "CABA"
+      },
+      "telefono": "+54 11 4555-0036",
+      "horarios": [
+        {
+          "dia": "lunes",
+          "apertura": "12:00",
+          "cierre": "23:00"
+        },
+        {
+          "dia": "viernes",
+          "apertura": "12:00",
+          "cierre": "01:00"
+        }
+      ],
+      "metodos_pago": [
+        "efectivo",
+        "debito",
+        "qr"
+      ]
+    },
+    "servicios_adicionales": [],
+    "promociones": [],
+    "eventos_especiales": []
+  },
+  {
+    "_id": ObjectId("6720a1b2c3d4e5f607182937"),
+    "nombre": "Local con menú nulo",
+    "descripcion": "Restaurante de cocina casera.",
+    "caracteristicas": [
+      "ambiente familiar"
+    ],
+    "informacion": {
+      "direccion": {
+        "calle": "Av. Santa Fe",
+        "numero": "2037",
+        "ciudad": "Buenos Aires",
+        "provincia": "CABA"
+      },
+      "telefono": "+54 11 4555-0037",
+      "horarios": [
+        {
+          "dia": "lunes",
+          "apertura": "12:00",
+          "cierre": "23:00"
+        },
+        {
+          "dia": "viernes",
+          "apertura": "12:00",
+          "cierre": "01:00"
+        }
+      ],
+      "metodos_pago": [
+        "efectivo",
+        "debito",
+        "qr"
+      ]
+    },
+    "servicios_adicionales": [],
+    "promociones": [],
+    "eventos_especiales": [],
+    "menu": null
   }
-]
+]);
 
+db.clientes.insertOne({
+  "email": "ana@mail.com",
+  "nombre": "Ana Pérez",
+  "fecha_registro": ISODate("2026-11-02T00:00:00Z"),
+  "_id": ObjectId("6720a1b2c3d4e5f607183001")
+});
 
-## Platos
-
-[
-  {
-    "restaurante_id": { "$oid": "6720a1b2c3d4e5f607182931" },
-    "nombre": "Bife de chorizo",
-    "precio": 18500,
-    "descripcion": "400 g a la parrilla con guarnición",
-    "categoria": "plato_principal",
-    "observacion": "Punto de cocción a elección",
-    "es_vegetariano": false,
-    "es_vegano": false,
-    "es_sin_tacc": true
-  },
-  {
-    "restaurante_id": { "$oid": "6720a1b2c3d4e5f607182931" },
-    "nombre": "Provoleta",
-    "precio": 7200,
-    "descripcion": "Provolone a la parrilla con orégano",
-    "categoria": "entrada",
-    "es_vegetariano": true,
-    "es_vegano": false,
-    "es_sin_tacc": true
-  },
-  {
-    "restaurante_id": { "$oid": "6720a1b2c3d4e5f607182931" },
-    "nombre": "Flan casero",
-    "precio": 5200,
-    "descripcion": "Con dulce de leche y crema",
-    "categoria": "postre",
-    "es_vegetariano": true,
-    "es_vegano": false,
-    "es_sin_tacc": false
-  },
-  {
-    "restaurante_id": { "$oid": "6720a1b2c3d4e5f607182931" },
-    "nombre": "Malbec copa",
-    "precio": 4800,
-    "descripcion": "Vino tinto de Mendoza",
-    "categoria": "bebida",
-    "es_vegetariano": true,
-    "es_vegano": true,
-    "es_sin_tacc": true
-  },
-  {
-    "restaurante_id": { "$oid": "6720a1b2c3d4e5f607182932" },
-    "nombre": "Hamburguesa de lentejas",
-    "precio": 9800,
-    "descripcion": "Con pan de masa madre y vegetales asados",
-    "categoria": "opcion_vegana",
-    "observacion": "Pan sin TACC bajo pedido",
-    "es_vegetariano": true,
-    "es_vegano": true,
-    "es_sin_tacc": false
-  },
-  {
-    "restaurante_id": { "$oid": "6720a1b2c3d4e5f607182932" },
-    "nombre": "Bowl de quinoa",
-    "precio": 8900,
-    "descripcion": "Quinoa, palta, garbanzos y tahini",
-    "categoria": "opcion_sin_tacc",
-    "es_vegetariano": true,
-    "es_vegano": true,
-    "es_sin_tacc": true
-  }
-]
-
-##Clientes
-[
-  {
-    "email": "ana@mail.com",
-    "nombre": "Ana Pérez",
-    "fecha_registro": { "$date": "2026-11-02T00:00:00Z" }
-  },
+db.clientes.insertMany([
   {
     "email": "juan@mail.com",
     "nombre": "Juan Gómez",
-    "fecha_registro": { "$date": "2026-11-02T00:00:00Z" }
-  }
-]
-
-##Resenias
-[
-  {
-    "restaurante_id": { "$oid": "6720a1b2c3d4e5f607182931" },
-    "email_cliente": "ana@mail.com",
-    "comentario": "Excelente carne y muy buena atención.",
-    "calificacion": 5,
-    "fecha": { "$date": "2026-11-02T12:00:00Z" }
+    "fecha_registro": ISODate("2026-11-02T00:00:00Z"),
+    "_id": ObjectId("6720a1b2c3d4e5f607183002")
   },
   {
-    "restaurante_id": { "$oid": "6720a1b2c3d4e5f607182931" },
+    "email": "lucia@mail.com",
+    "nombre": "Lucía Fernández",
+    "fecha_registro": ISODate("2026-11-03T00:00:00-03:00"),
+    "_id": ObjectId("6720a1b2c3d4e5f607183003")
+  }
+]);
+
+db.resenias.insertOne({
+  "restaurante_id": ObjectId("6720a1b2c3d4e5f607182931"),
+  "email_cliente": "ana@mail.com",
+  "comentario": "Excelente carne y muy buena atención.",
+  "calificacion": 5,
+  "fecha": ISODate("2026-11-02T12:00:00Z"),
+  "_id": ObjectId("6720a1b2c3d4e5f607184001")
+});
+
+db.resenias.insertMany([
+  {
+    "restaurante_id": ObjectId("6720a1b2c3d4e5f607182931"),
     "email_cliente": "juan@mail.com",
     "comentario": "Rico, pero tardaron un poco.",
     "calificacion": 4,
-    "fecha": { "$date": "2026-11-02T13:00:00Z" }
+    "fecha": ISODate("2026-11-02T13:00:00Z"),
+    "_id": ObjectId("6720a1b2c3d4e5f607184002")
   },
   {
-    "restaurante_id": { "$oid": "6720a1b2c3d4e5f607182932" },
+    "restaurante_id": ObjectId("6720a1b2c3d4e5f607182932"),
     "email_cliente": "ana@mail.com",
     "comentario": "Las opciones veganas son geniales.",
     "calificacion": 5,
-    "fecha": { "$date": "2026-11-02T14:00:00Z" }
+    "fecha": ISODate("2026-11-02T14:00:00Z"),
+    "_id": ObjectId("6720a1b2c3d4e5f607184003")
+  },
+  {
+    "restaurante_id": ObjectId("6720a1b2c3d4e5f607182933"),
+    "email_cliente": "lucia@mail.com",
+    "comentario": "Muy buen risotto y excelente música.",
+    "calificacion": 4,
+    "fecha": ISODate("2026-11-04T21:00:00-03:00"),
+    "_id": ObjectId("6720a1b2c3d4e5f607184004")
+  },
+  {
+    "restaurante_id": ObjectId("6720a1b2c3d4e5f607182934"),
+    "email_cliente": "juan@mail.com",
+    "comentario": "Comida casera muy rica.",
+    "calificacion": 3,
+    "fecha": ISODate("2026-11-05T13:00:00-03:00"),
+    "_id": ObjectId("6720a1b2c3d4e5f607184005")
   }
-]
+]);
