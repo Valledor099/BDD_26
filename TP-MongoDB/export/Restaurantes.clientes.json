@@ -1,0 +1,30 @@
+[{
+  "_id": {
+    "$oid": "6720a1b2c3d4e5f607183001"
+  },
+  "email": "ana@mail.com",
+  "nombre": "Ana Pérez",
+  "fecha_registro": {
+    "$date": "2026-11-02T00:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6720a1b2c3d4e5f607183002"
+  },
+  "email": "juan@mail.com",
+  "nombre": "Juan Gómez",
+  "fecha_registro": {
+    "$date": "2026-11-02T00:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6720a1b2c3d4e5f607183003"
+  },
+  "email": "lucia@mail.com",
+  "nombre": "Lucía Fernández",
+  "fecha_registro": {
+    "$date": "2026-11-03T03:00:00.000Z"
+  }
+}]

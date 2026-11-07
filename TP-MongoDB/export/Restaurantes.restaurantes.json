@@ -1,0 +1,492 @@
+[{
+  "_id": {
+    "$oid": "6720a1b2c3d4e5f607182931"
+  },
+  "nombre": "La Parrilla del Puerto",
+  "descripcion": "Parrilla tradicional argentina con vista al río.",
+  "caracteristicas": [
+    "parrilla",
+    "carnes",
+    "ambiente familiar",
+    "vista al río"
+  ],
+  "informacion": {
+    "direccion": {
+      "calle": "Av. Alicia Moreau de Justo",
+      "numero": "1200",
+      "ciudad": "Buenos Aires",
+      "provincia": "CABA"
+    },
+    "telefono": "+54 11 4555-1234",
+    "email": "contacto@parrilladelpuerto.com",
+    "horarios": [
+      {
+        "dia": "jueves",
+        "apertura": "11:30",
+        "cierre": "23:59"
+      },
+      {
+        "dia": "viernes",
+        "apertura": "11:30",
+        "cierre": "01:00"
+      },
+      {
+        "dia": "sabado",
+        "apertura": "11:30",
+        "cierre": "01:00"
+      },
+      {
+        "dia": "domingo",
+        "apertura": "11:30",
+        "cierre": "17:00"
+      }
+    ],
+    "metodos_pago": [
+      "efectivo",
+      "debito",
+      "credito",
+      "qr"
+    ]
+  },
+  "servicios_adicionales": [
+    {
+      "tipo": "estacionamiento",
+      "descripcion": "Playa propia con 30 lugares"
+    },
+    {
+      "tipo": "eventos_privados",
+      "descripcion": "Salón para hasta 60 personas"
+    },
+    {
+      "tipo": "opciones_sin_tacc"
+    },
+    {
+      "tipo": "pago_qr"
+    },
+    {
+      "tipo": "delivery"
+    },
+    {
+      "tipo": "reservas_online"
+    },
+    {
+      "tipo": "shows_en_vivo"
+    }
+  ],
+  "promociones": [
+    {
+      "nombre": "2x1 en bebidas",
+      "porcentaje_descuento": 50,
+      "publico": "general",
+      "fecha_inicio": {
+        "$date": "2026-11-01T03:00:00.000Z"
+      },
+      "fecha_fin": {
+        "$date": "2026-11-30T03:00:00.000Z"
+      }
+    },
+    {
+      "nombre": "Descuento para jubilados",
+      "porcentaje_descuento": 10,
+      "publico": "jubilados",
+      "fecha_inicio": {
+        "$date": "2026-11-01T03:00:00.000Z"
+      },
+      "fecha_fin": {
+        "$date": "2026-11-30T03:00:00.000Z"
+      }
+    }
+  ],
+  "eventos_especiales": [
+    {
+      "nombre": "Noche de tango",
+      "descripcion": "Cena show con orquesta en vivo",
+      "fecha": {
+        "$date": "2026-11-14T03:00:00.000Z"
+      },
+      "horario": "21:00",
+      "requiere_reserva": true
+    },
+    {
+      "nombre": "Música en vivo",
+      "descripcion": "Jazz durante la cena",
+      "fecha": {
+        "$date": "2026-11-10T03:00:00.000Z"
+      },
+      "horario": "21:00",
+      "requiere_reserva": true
+    }
+  ],
+  "menu": [
+    {
+      "nombre": "Bife de chorizo",
+      "precio": 18500,
+      "descripcion": "400 g a la parrilla con guarnición",
+      "categoria": "plato_principal",
+      "observacion": "Punto de cocción a elección",
+      "es_vegetariano": false,
+      "es_vegano": false,
+      "es_sin_tacc": true
+    },
+    {
+      "nombre": "Provoleta",
+      "precio": 7200,
+      "descripcion": "Provolone a la parrilla con orégano",
+      "categoria": "entrada",
+      "es_vegetariano": true,
+      "es_vegano": false,
+      "es_sin_tacc": true
+    },
+    {
+      "nombre": "Flan casero",
+      "precio": 5200,
+      "descripcion": "Con dulce de leche y crema",
+      "categoria": "postre",
+      "es_vegetariano": true,
+      "es_vegano": false,
+      "es_sin_tacc": false
+    },
+    {
+      "nombre": "Malbec copa",
+      "precio": 4800,
+      "descripcion": "Vino tinto de Mendoza",
+      "categoria": "bebida",
+      "es_vegetariano": true,
+      "es_vegano": true,
+      "es_sin_tacc": true
+    }
+  ],
+  "ultima_actualizacion": {
+    "$date": "2026-11-07T21:28:54.556Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6720a1b2c3d4e5f607182932"
+  },
+  "nombre": "Verde Vivo",
+  "descripcion": "Cocina vegetariana y vegana de estación.",
+  "caracteristicas": [
+    "vegano",
+    "vegetariano",
+    "orgánico"
+  ],
+  "informacion": {
+    "direccion": {
+      "calle": "Thames",
+      "numero": "1850",
+      "ciudad": "Buenos Aires",
+      "provincia": "CABA"
+    },
+    "telefono": "+54 11 4777-9876",
+    "horarios": [
+      {
+        "dia": "lunes",
+        "apertura": "11:30",
+        "cierre": "20:00"
+      },
+      {
+        "dia": "martes",
+        "apertura": "11:30",
+        "cierre": "20:00"
+      },
+      {
+        "dia": "miercoles",
+        "apertura": "11:30",
+        "cierre": "20:00"
+      }
+    ],
+    "metodos_pago": [
+      "efectivo",
+      "transferencia",
+      "qr"
+    ]
+  },
+  "servicios_adicionales": [
+    {
+      "tipo": "opciones_veganas"
+    },
+    {
+      "tipo": "opciones_vegetarianas"
+    },
+    {
+      "tipo": "opciones_sin_tacc"
+    },
+    {
+      "tipo": "catering",
+      "descripcion": "Viandas para empresas"
+    },
+    {
+      "tipo": "delivery"
+    }
+  ],
+  "promociones": [
+    {
+      "nombre": "Descuento para estudiantes",
+      "porcentaje_descuento": 25,
+      "publico": "estudiantes",
+      "fecha_inicio": {
+        "$date": "2026-11-01T03:00:00.000Z"
+      },
+      "fecha_fin": {
+        "$date": "2026-11-30T03:00:00.000Z"
+      }
+    },
+    {
+      "nombre": "Promoción de primavera",
+      "porcentaje_descuento": 15,
+      "publico": "general",
+      "fecha_inicio": {
+        "$date": "2026-09-10T03:00:00.000Z"
+      },
+      "fecha_fin": {
+        "$date": "2026-10-10T03:00:00.000Z"
+      }
+    }
+  ],
+  "eventos_especiales": [
+    {
+      "nombre": "Clase de cocina vegana",
+      "descripcion": "Taller práctico de 2 horas",
+      "fecha": {
+        "$date": "2026-11-20T03:00:00.000Z"
+      },
+      "horario": "18:00",
+      "requiere_reserva": true
+    }
+  ],
+  "menu": [
+    {
+      "nombre": "Hamburguesa de lentejas",
+      "precio": 9800,
+      "descripcion": "Con pan de masa madre y vegetales asados",
+      "categoria": "opcion_vegana",
+      "observacion": "Pan sin TACC bajo pedido",
+      "es_vegetariano": true,
+      "es_vegano": true,
+      "es_sin_tacc": false
+    },
+    {
+      "nombre": "Bowl de quinoa",
+      "precio": 8900,
+      "descripcion": "Quinoa, palta, garbanzos y tahini",
+      "categoria": "opcion_sin_tacc",
+      "es_vegetariano": true,
+      "es_vegano": true,
+      "es_sin_tacc": true
+    }
+  ],
+  "ultima_actualizacion": {
+    "$date": "2026-11-07T21:29:17.047Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6720a1b2c3d4e5f607182933"
+  },
+  "nombre": "Sabores del Sur",
+  "descripcion": "Restaurante de cocina casera.",
+  "caracteristicas": [
+    "ambiente familiar"
+  ],
+  "informacion": {
+    "direccion": {
+      "calle": "Av. Santa Fe",
+      "numero": "2033",
+      "ciudad": "Buenos Aires",
+      "provincia": "CABA"
+    },
+    "telefono": "+54 11 4555-0033",
+    "horarios": [
+      {
+        "dia": "lunes",
+        "apertura": "11:30",
+        "cierre": "23:00"
+      },
+      {
+        "dia": "viernes",
+        "apertura": "11:30",
+        "cierre": "01:00"
+      }
+    ],
+    "metodos_pago": [
+      "efectivo",
+      "debito",
+      "qr"
+    ]
+  },
+  "servicios_adicionales": [
+    {
+      "tipo": "delivery"
+    },
+    {
+      "tipo": "reservas_online"
+    },
+    {
+      "tipo": "estacionamiento"
+    },
+    {
+      "tipo": "opciones_sin_tacc"
+    },
+    {
+      "tipo": "shows_en_vivo"
+    }
+  ],
+  "promociones": [
+    {
+      "nombre": "Descuento para estudiantes",
+      "porcentaje_descuento": 30,
+      "publico": "estudiantes",
+      "fecha_inicio": {
+        "$date": "2026-11-01T03:00:00.000Z"
+      },
+      "fecha_fin": {
+        "$date": "2026-11-30T03:00:00.000Z"
+      }
+    },
+    {
+      "nombre": "Descuento para jubilados",
+      "porcentaje_descuento": 15,
+      "publico": "jubilados",
+      "fecha_inicio": {
+        "$date": "2026-11-01T03:00:00.000Z"
+      },
+      "fecha_fin": {
+        "$date": "2026-11-30T03:00:00.000Z"
+      }
+    },
+    {
+      "nombre": "Bienvenida de primavera",
+      "porcentaje_descuento": 10,
+      "publico": "general",
+      "fecha_inicio": {
+        "$date": "2026-09-01T03:00:00.000Z"
+      },
+      "fecha_fin": {
+        "$date": "2026-09-30T03:00:00.000Z"
+      }
+    }
+  ],
+  "eventos_especiales": [
+    {
+      "nombre": "Música en vivo",
+      "descripcion": "Folklore en vivo",
+      "fecha": {
+        "$date": "2026-11-12T03:00:00.000Z"
+      },
+      "horario": "20:30",
+      "requiere_reserva": false
+    },
+    {
+      "nombre": "Degustación",
+      "descripcion": "Degustación de platos regionales",
+      "fecha": {
+        "$date": "2026-11-25T03:00:00.000Z"
+      },
+      "horario": "19:00",
+      "requiere_reserva": true
+    }
+  ],
+  "menu": [
+    {
+      "nombre": "Risotto de hongos",
+      "precio": 12500,
+      "descripcion": "Arroz cremoso con hongos de estación",
+      "categoria": "plato_principal",
+      "observacion": "Consultar ingredientes al reservar",
+      "es_vegetariano": true,
+      "es_vegano": false,
+      "es_sin_tacc": true
+    },
+    {
+      "nombre": "Brownie",
+      "precio": 6000,
+      "descripcion": "Brownie de chocolate con helado",
+      "categoria": "postre",
+      "es_vegetariano": true,
+      "es_vegano": false,
+      "es_sin_tacc": false
+    },
+    {
+      "nombre": "Limonada",
+      "precio": 3500,
+      "descripcion": "Limonada fresca con menta",
+      "categoria": "bebida",
+      "es_vegetariano": true,
+      "es_vegano": true,
+      "es_sin_tacc": true
+    }
+  ],
+  "ultima_actualizacion": {
+    "$date": "2026-11-07T21:28:54.558Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6720a1b2c3d4e5f607182934"
+  },
+  "nombre": "El Rincón Casero",
+  "descripcion": "Restaurante de cocina casera.",
+  "caracteristicas": [
+    "ambiente familiar"
+  ],
+  "informacion": {
+    "direccion": {
+      "calle": "Av. Santa Fe",
+      "numero": "2034",
+      "ciudad": "Buenos Aires",
+      "provincia": "CABA"
+    },
+    "telefono": "+54 11 4555-0034",
+    "horarios": [
+      {
+        "dia": "lunes",
+        "apertura": "12:00",
+        "cierre": "23:00"
+      },
+      {
+        "dia": "viernes",
+        "apertura": "12:00",
+        "cierre": "01:00"
+      }
+    ],
+    "metodos_pago": [
+      "efectivo",
+      "debito",
+      "qr"
+    ]
+  },
+  "servicios_adicionales": [
+    {
+      "tipo": "estacionamiento"
+    },
+    {
+      "tipo": "opciones_vegetarianas"
+    }
+  ],
+  "promociones": [],
+  "eventos_especiales": [],
+  "menu": [
+    {
+      "nombre": "Tarta de verduras",
+      "precio": 7500,
+      "descripcion": "Tarta de acelga y calabaza",
+      "categoria": "plato_principal",
+      "es_vegetariano": true,
+      "es_vegano": false,
+      "es_sin_tacc": false
+    },
+    {
+      "nombre": "Agua mineral",
+      "precio": 2000,
+      "descripcion": "Botella de 500 ml",
+      "categoria": "bebida",
+      "es_vegetariano": true,
+      "es_vegano": true,
+      "es_sin_tacc": true
+    }
+  ],
+  "ultima_actualizacion": {
+    "$date": "2026-11-07T21:12:23.039Z"
+  }
+}]
